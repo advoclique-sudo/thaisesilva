@@ -81,6 +81,26 @@
   .hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
   .hero-note{margin-top:30px;font-size:.86rem;color:rgba(255,255,255,.62)}
 
+  /* Situações comuns */
+  .situacoes{background:var(--sand);border-bottom:1px solid var(--line)}
+  .situacoes .intro{max-width:620px;margin-bottom:32px}
+  .situacoes .intro p{margin-top:10px;color:var(--muted)}
+  .sit-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px 40px}
+  .sit-grid h4{font-family:var(--sans);font-size:.78rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--gold);margin-bottom:12px}
+  .sit-grid ul{display:flex;flex-direction:column;gap:10px;font-size:.95rem}
+  .sit-grid li{display:flex;gap:10px;align-items:flex-start}
+  .sit-grid li svg{width:16px;height:16px;flex:none;margin-top:4px;stroke:var(--navy);fill:none;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
+
+  /* Prazos */
+  .prazos{background:var(--navy);color:#fff}
+  .prazos .intro{max-width:640px;margin-bottom:40px}
+  .prazos .intro p{margin-top:10px;color:rgba(255,255,255,.75)}
+  .prazo-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:32px}
+  .prazo{border-left:1px solid rgba(201,168,103,.5);padding-left:18px}
+  .prazo .num{font-family:var(--serif);font-size:2.4rem;font-weight:600;color:var(--gold);line-height:1}
+  .prazo p{margin-top:12px;font-size:.92rem;color:rgba(255,255,255,.8)}
+  .prazos .obs{margin-top:36px;display:flex;align-items:center;gap:22px;flex-wrap:wrap;font-size:.9rem;color:rgba(255,255,255,.65)}
+
   /* Áreas */
   .areas .intro{max-width:620px;margin-bottom:40px}
   .areas .intro p{margin-top:10px;color:var(--muted)}
@@ -94,7 +114,7 @@
   .col a{display:inline-block;margin-top:16px;font-weight:600;font-size:.92rem;color:var(--navy);border-bottom:1px solid var(--gold)}
 
   /* Sobre + como funciona */
-  .sobre{background:var(--sand)}
+  .sobre{background:#fff}
   .sobre .wrap{display:grid;grid-template-columns:300px 1fr;gap:56px;align-items:center}
   .sobre img{border-radius:6px;aspect-ratio:4/5;object-fit:cover;object-position:center top}
   .sobre h2{font-size:1.9rem}
@@ -129,6 +149,7 @@
   .wa-fixo svg{width:28px;height:28px;fill:#fff}
 
   @media (max-width:980px){
+    .prazo-grid{grid-template-columns:1fr 1fr}
     .cols{grid-template-columns:1fr 1fr;gap:32px}
     .col .para{min-height:0}
     .sobre .wrap{grid-template-columns:240px 1fr;gap:36px}
@@ -144,6 +165,8 @@
     .hero .wrap{padding:calc(min(60vh,520px) - 130px) 0 52px}
     .hero-actions .btn{width:100%;justify-content:center}
     .cols{grid-template-columns:1fr;gap:28px}
+    .sit-grid{grid-template-columns:1fr;gap:24px}
+    .prazo-grid{grid-template-columns:1fr;gap:24px}
     .sobre .wrap{grid-template-columns:1fr;gap:28px}
     .sobre img{max-width:260px}
     .contato .wrap{grid-template-columns:1fr;gap:0}
@@ -182,6 +205,41 @@
         <a class="btn btn-line" href="#areas">Ver em que posso ajudar</a>
       </div>
       <p class="hero-note">OAB/RJ 274.460 · Atendimento 100% online · Análise individual do caso</p>
+    </div>
+  </div>
+</section>
+
+<section class="section situacoes" id="situacoes">
+  <div class="wrap">
+    <div class="intro">
+      <h2>Reconhece alguma dessas situações?</h2>
+      <p>Se sim, vale a pena conversar. São casos comuns, e a lei prevê caminhos para cada um deles.</p>
+    </div>
+    <div class="sit-grid">
+      <div>
+        <h4>Com o INSS</h4>
+        <ul>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Benefício negado, cortado ou com valor abaixo do esperado</li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Afastamento por doença sem receber o auxílio</li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Pedido de aposentadoria parado ou indeferido</li>
+        </ul>
+      </div>
+      <div>
+        <h4>No trabalho</h4>
+        <ul>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Demissão sem o pagamento de todas as verbas</li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Contrato como PJ, mas rotina de empregado</li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Horas extras, FGTS ou adicionais nunca pagos</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Com empresas e bancos</h4>
+        <ul>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Nome negativado por dívida que não existe</li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Empréstimo ou compra que você não reconhece</li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Plano de saúde negando exame, cirurgia ou tratamento</li>
+        </ul>
+      </div>
     </div>
   </div>
 </section>
@@ -243,6 +301,40 @@
   </div>
 </section>
 
+<section class="section prazos" id="prazos">
+  <div class="wrap">
+    <div class="intro">
+      <h2>Direitos têm prazo</h2>
+      <p>Alguns dos limites que a lei estabelece. Quanto antes a situação for analisada, mais alternativas existem.</p>
+    </div>
+    <div class="prazo-grid">
+      <div class="prazo">
+        <div class="num">2 anos</div>
+        <p>para cobrar direitos trabalhistas depois de sair do emprego, alcançando os últimos 5 anos do contrato.</p>
+      </div>
+      <div class="prazo">
+        <div class="num">30 dias</div>
+        <p>para recorrer de um benefício negado pelo INSS na via administrativa. Depois disso, ainda é possível ir à Justiça.</p>
+      </div>
+      <div class="prazo">
+        <div class="num">10 anos</div>
+        <p>para pedir a revisão de um benefício concedido com valor errado, contados do primeiro pagamento.</p>
+      </div>
+      <div class="prazo">
+        <div class="num">5 anos</div>
+        <p>para pedir indenização por danos causados por um produto ou serviço, nas relações de consumo.</p>
+      </div>
+    </div>
+    <div class="obs">
+      <a class="btn btn-wa" data-wa href="https://wa.me/5521981492887">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 3.5A11.8 11.8 0 0 0 12.05 0C5.5 0 .2 5.3.2 11.85c0 2.1.55 4.13 1.6 5.93L0 24l6.4-1.68a11.8 11.8 0 0 0 5.65 1.44c6.54 0 11.85-5.3 11.85-11.86 0-3.17-1.23-6.15-3.4-8.4zm-8.45 18.25c-1.77 0-3.5-.48-5.02-1.38l-.36-.21-3.8 1 1.02-3.7-.24-.38a9.83 9.83 0 0 1-1.5-5.23c0-5.44 4.42-9.86 9.87-9.86 2.63 0 5.1 1.03 6.96 2.89a9.78 9.78 0 0 1 2.88 6.97c0 5.44-4.43 9.9-9.81 9.9zm5.4-7.38c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.25-.46-2.38-1.47-.88-.78-1.47-1.75-1.65-2.05-.17-.3-.02-.46.13-.6.14-.14.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.6-.91-2.2-.24-.58-.49-.5-.67-.5h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.08c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.7.63.71.23 1.36.2 1.87.12.57-.09 1.75-.72 2-1.41.25-.7.25-1.29.17-1.41-.07-.13-.27-.2-.57-.35z"/></svg>
+        Verificar o meu prazo
+      </a>
+      <span>Os prazos variam conforme o caso. Na dúvida, pergunte.</span>
+    </div>
+  </div>
+</section>
+
 <section class="section sobre" id="sobre">
   <div class="wrap">
     <img src="imagens/thaise-perfil.jpg" alt="Advogada Thaise Silva" loading="lazy">
@@ -257,7 +349,7 @@
           <li><b>2.</b><span>Analiso os documentos e os prazos do seu caso.</span></li>
           <li><b>3.</b><span>Explico os caminhos possíveis e você decide como seguir.</span></li>
         </ol>
-        <p class="obs">Não precisa ter todos os documentos em mãos para o primeiro contato.</p>
+        <p class="obs">Não precisa ter todos os documentos em mãos para o primeiro contato. Extrato do Meu INSS, carteira de trabalho digital e comprovantes podem ser obtidos pela internet, e eu oriento como.</p>
       </div>
     </div>
   </div>
